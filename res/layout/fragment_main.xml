@@ -16,7 +16,7 @@
         android:gravity="center"
         android:background="@drawable/bg_circle_blue_shadow"
         android:textColor="@android:color/white"
-        android:text="圆形\n按钮" />
+        android:text="圆形\n按钮1" />
     
     <Button 
         android:id="@+id/btn2"
@@ -28,6 +28,18 @@
         android:gravity="center"
         android:background="@drawable/bg_retangle_red_shadow"
         android:textColor="@android:color/white"
-        android:text="矩形\n按钮"/>
+        android:text="矩形\n按钮2"/>
+    
+    <Button 
+        android:id="@+id/btn3"
+        android:layout_width="96dp"
+        android:layout_height="96dp"
+        android:layout_centerHorizontal="true"
+        android:layout_above="@id/btn1"
+        android:layout_marginBottom="16dp"
+        android:gravity="center"
+        android:background="@drawable/bg_circle_green_shadow"
+        android:textColor="@android:color/white"
+        android:text="圆形\n按钮3"/>
 
 </RelativeLayout>

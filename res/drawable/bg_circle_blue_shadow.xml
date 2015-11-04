@@ -5,6 +5,14 @@
     <item android:state_pressed="true">
         <layer-list>
             <!-- 首先绘制阴影 -->
+            
+            <!-- item中的top、right、left、bottom只会影响当前item下的绘制位置，并不对其上层内容的位置有影响；
+            	而padding则会影响其上层内容的绘制位置 （但其上层内容的绘制位置并非基于设置padding'的item，
+            	而是基于原始位置，注意测试和理解）-->
+ 				           	
+            <!-- 睡了一觉，想到一个更容易理解的说法，在item存在top等设置并且item下的子项（shape）存在padding的设置的情况下，
+            	其内容的绘制位置是这样的，首先忽略top等设置，在原始位置将所有层都绘制出来（pading此时有效）
+            	然后再将设置的top等设置的层进行位移，其他层（如内容）的位置不变；-->
             <item android:top="1dp" android:right="1dp">
                 <layer-list>
                     <item>

@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    
+    <!-- 按下状态 -->
+    <item android:state_pressed="true">
+        <layer-list>
+            <!-- 首先绘制阴影 -->
+            <!-- 这种实现方式简单，但是效果欠佳 -->
+            
+            <item android:top="1dp" android:right="1dp">
+                <shape android:shape="oval">
+	                <gradient 
+	                    android:startColor="#FF000000"
+	                    android:centerColor="#ff000000"
+	                    android:endColor="#00000000"
+	                    android:type="radial"
+	                    android:gradientRadius="96"/>
+	                <padding
+	                	android:bottom="10px"
+	                    android:left="10px"
+	                    android:right="10px"
+	                    android:top="10px"/>
+                </shape>
+            </item>
+
+            <!-- 最后绘制蓝色的按钮 -->
+            <item>
+                <shape android:shape="oval">
+                    <solid android:color="#ffaeef95"/>
+                </shape>
+            </item>
+        </layer-list>
+    </item>
+
+    <!-- 按钮可用状态（默认状态） -->
+    <item android:state_enabled="true">
+
+        <layer-list>
+            <!-- 首先绘制阴影 -->
+            <item>
+                <shape android:shape="oval">
+	                <gradient 
+	                    android:startColor="#FF000000"
+	                    android:centerColor="#ff000000"
+	                    android:endColor="#00000000"
+	                    android:type="radial"
+	                    android:gradientRadius="96"/>
+	                <padding
+	                	android:bottom="10px"
+	                    android:left="10px"
+	                    android:right="10px"
+	                    android:top="10px"/>
+                </shape>
+            </item>
+
+            <!-- 绘制蓝色按钮 -->
+            <item>
+                <shape android:shape="oval">
+                    <solid android:color="#ff7cad62"/>
+                </shape>
+            </item>
+        </layer-list>
+
+    </item>
+
+</selector>
